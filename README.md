@@ -1,1 +1,1 @@
-# go-demo user tekton
+# go-demo pipeline tekton
