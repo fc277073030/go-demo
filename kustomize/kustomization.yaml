@@ -1,0 +1,10 @@
+resources:
+  - deployment.yaml
+  - service.yaml
+
+
+secretGenerator:
+  - name: go-demo-secret
+    literals:
+      - env=dev
+

@@ -1,0 +1,12 @@
+apiVersion: skaffold/v2beta1
+kind: Config
+metadata:
+  name: go-demo
+build:
+  artifacts:
+  - image: registry.cn-hangzhou.aliyuncs.com/tekton-pipelines/go-demo
+  tagPolicy:
+    gitCommit: {}
+deploy:
+  kustomize:
+    paths: ["kustomize"]

@@ -16,19 +16,7 @@ spec:
     spec:
       containers:
         - name: go-demo-example
-          image: registry.cn-hangzhou.aliyuncs.com/tekton-pipelines/go-demo:latest
-          imagePullPolicy: IfNotPresent
+          image: registry.cn-hangzhou.aliyuncs.com/tekton-pipelines/go-demo
+          imagePullPolicy: Always
           ports:
             - containerPort: 8080
----
-apiVersion: v1
-kind: Service
-metadata:
-  name: go-demo-example
-  labels:
-    app: spring-demo-example
-spec:
-  ports:
-    - port: 8080
-  selector:
-    app: example
